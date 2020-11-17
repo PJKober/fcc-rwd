@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"editor.wordWrapColumn": 120,
+		"editor.defaultFormatter": "vscode.configuration-editing"
+	}
+}
