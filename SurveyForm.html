@@ -43,13 +43,16 @@
   <!-- User Story #7: Inside the form, I can enter a number in a field with id="number". --> 
 <label id="name-number" for="number">Number</label>
 <!-- User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error. -->  
+<!-- User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.-->  
 <input
          type="number"
          name="number"
          id="number"
+         min=18
+         max=120
          placeholder="Enter your number"
          required
  />
-
+ 
 </body>
 </html>
