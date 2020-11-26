@@ -4,6 +4,49 @@
     <title>Product Landing Page</title>
 
     <style>
+        img {
+            height:3em;
+          }
+          
+          #header {
+            position: fixed;
+            top: 0;
+            min-height: 77px;
+            width: 100%;
+            align-items: center;
+          }
+          
+          .nav {
+            display: block;
+          }
+          
+          .nav-link {
+            padding: 14px 16px;
+          }
+          
+          #nav-bar {
+            padding: 5px;
+            margin-left: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+          
+          .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            h2 {
+              margin-bottom: 3px;
+            }
+            #email {
+              display: flex;
+              text-align: center;
+            }
+          }
         
     </style>      
 </head>
@@ -15,6 +58,9 @@
         I can see a nav element with a corresponding id="nav-bar".-->
     <!-- User Story #4: I can see at least three clickable elements 
         inside the nav element, each with the class nav-link.-->
+    <!-- User Story #5: When I click a .nav-link button in the nav element, 
+      I am taken to the corresponding section of the landing page.-->
+    <!-- User Story #13: The navbar should always be at the top of the viewport. -->    
     <nav id="nav-bar" class="menu">
       
       <!-- User Story #2: I can see an image within the header element with a corresponding 
@@ -24,6 +70,10 @@
       <a href="#two" class="nav-link">TWO</a> |
       <a href="#tree" class="nav-link">TRREE</a> |              
     </nav>
+  </div>
+
+  <div>
+    <h1>Product Landing Page</h1> <!-- Page Title -->  
   </div>
 
   <!-- User Story #6: I can watch an embedded product video with id="video". -->  
