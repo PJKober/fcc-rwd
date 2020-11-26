@@ -2,103 +2,347 @@
 <html>
 <head>
     <title>Product Landing Page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
 
-    <style>
-        img {
-            height:3em;
-          }
-          
-          #header {
-            position: fixed;
-            top: 0;
-            min-height: 77px;
-            width: 100%;
-            align-items: center;
-          }
-          
-          .nav {
-            display: block;
-          }
-          
-          .nav-link {
-            padding: 14px 16px;
-          }
-          
-          #nav-bar {
-            padding: 5px;
-            margin-left: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-          }
-          
-          .form-container {
+<style>
+        
+    @import url('https://fonts.googleapis.com/css?family=Francois+One');
+
+    @media screen {
+    * { font-family: sans-serif }
+    }
+
+    body {
+        background-color: rgb(120,120,120);
+        font-family: 'Francois One', sans-serif;
+        font-style: italic;
+        color: rgb(51,51,51);
+        }
+        #page-container {
+        position: relative;
+    }
+    #header {
+        background-color: rgb(243,112,32);
+        position: fixed;
+        top: 0;
+        min-height: 77px;
+        width: 100%;
+        padding: 0px 23px;
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        @media (max-width: 568px) {
+            flex-wrap: wrap;
+        }
+    }
+    #header-img {
+        padding: 11px;
+        width:100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 27px;
+        @media (max-width: 568px) {
+            position: relative;
+        }
+    }
+    h1 {
+    padding: 11px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #nav-bar {
+        padding: 3px;
+        margin-left: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @media (max-width: 568px) {
+            margin-top: 1px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             text-align: center;
-            h2 {
-              margin-bottom: 3px;
+        }
+    }
+    .nav-link {
+        margin: 23px;
+        padding: 11px;
+        font-size: 19px;
+        color: rgb(51,51,51);
+        @media (max-width: 568px) {
+            flex-direction: column;
+        }
+    }
+    button {
+        margin: 11px;
+        padding: 7px;
+        background-color: rgb(243,112,32);
+        border: 3px solid rgb(51,51,51);
+        border-radius: 9px;
+        @media (max-width: 568px) {
+            flex-direction: column;
+        }
+    }
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 127px;
+        margin-bottom: 23px;
+        h2 {
+            margin-bottom: 7px;
+        }
+        p {
+            font-size: 19px;
+        }
+        #email {
+            display: flex;
+            text-align: center;
+            font-size: 19px;
+            margin: 13px;
+            width: 323px;
+            height: 27px;
+            border: 2px solid rgb(243,112,32);
+            border-radius: 9px;
+        }
+        #submit {
+            margin: 13px;
+            padding: 5px;
+            font-size: 19px;
+            background-color: rgb(243,112,32);
+            border: 2px solid rgb(51,51,51);
+            border-radius: 9px;
+            &:hover {
+            background-color: red;
+            transition: background-color 2s;
             }
-            #email {
-              display: flex;
-              text-align: center;
-            }
-          }
+        }
+        @media (max-width: 568px) {
+            margin-top: 320px;
+        }
+    }
+.contents {
+  width: 100%;
+  margin: 0, auto;
+}
+#features {
+  padding: 23px;
+  .list {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    }
+  .icon, {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin: 41px 17px 0px 0px;
+    padding: 13px;
+    color: rgb(243,112,32);
+    .material-icons {
+      transform: scale(2,2);
+      }
+    @media (max-width: 568px) {
+      display: none;
+    }
+  }
+  .discription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: auto;
+    @media (max-width: 568px) {
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+      padding: 20px;
+      height: 150px;
+    }
+  }
+  @media (max-width: 368px) {
+    margin-top: 0px;
+  }
+}
+#how-it-works {
+  display: flex;
+  margin-top: 71px;
+  justify-content: center;
+    iframe {
+      max-width: 560px;
+      width: 100%;
+    }
+}
+#media-query {
+  display: flex;
+  flex-direction: row;
+  margin-top: 41px;
+  justify-content: center;
+  text-align: center;
+  padding: 51px;
+  img {
+    width: calc(90%/3);
+    height: 170px;
+    border: 5px solid black;
+  }
+  #duck1 {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(90%/3);
+    margin: 11px;
+    border: 17px solid rgb(243,112,32);
+    border-radius: 9px;
+  }
+  #duck2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(90%/3);
+    margin: 11px;
+    border: 7px solid rgb(243,112,32);
+    border-radius: 9px;
+  }
+  #duck3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(90%/3);
+    margin: 11px;
+    border: 7px solid rgb(243,112,32);
+    border-radius: 9px;
+  }
+  .option {
+    font-size: 23px;
+    text-align: center;
+    padding: 7px;
+  }
+  .btn {
+    padding: 13px;
+    width: 97px;
+    &:hover {
+     background-color: red;
+     transition: background-color 2s;
+    }
+  }
+}
+footer {
+  margin: auto;
+  text-align: center;
+}
         
     </style>      
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
+
 <body>
-
-<!-- User Story #1: My product landing page should have a header element with a corresponding id="header". -->
-<div id="header">
-    <!-- User Story #3: Within the #header element 
-        I can see a nav element with a corresponding id="nav-bar".-->
-    <!-- User Story #4: I can see at least three clickable elements 
-        inside the nav element, each with the class nav-link.-->
-    <!-- User Story #5: When I click a .nav-link button in the nav element, 
-      I am taken to the corresponding section of the landing page.-->
-    <!-- User Story #13: The navbar should always be at the top of the viewport. -->    
-    <nav id="nav-bar" class="menu">
+    <!-- User Story #1: My product landing page should have a header element with a corresponding id="header". -->
+    <div id="page-container">
+        <header id="header">
+            <!-- User Story #3: Within the #header element 
+                I can see a nav element with a corresponding id="nav-bar".-->
+            <!-- User Story #4: I can see at least three clickable elements 
+                inside the nav element, each with the class nav-link.-->
+            <!-- User Story #5: When I click a .nav-link button in the nav element, 
+                I am taken to the corresponding section of the landing page.-->
+            <!-- User Story #13: The navbar should always be at the top of the viewport. -->
+            <nav id="nav-bar" > <!-- Navigation Bar -->
+                
+                <!-- User Story #2: I can see an image within the header element with a corresponding 
+                    id="header-img". A company logo would make a good image -->
+                <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/299px-Tux.svg.png" />
+                            
+                <a href="#one" class="nav-link">ONE</a> |
+                <a href="#media-query" class="nav-link">media-query</a> |
+                <a href="#three" class="nav-link">TRREE</a> |               
+            </nav>
+        </header>
+      <br>  
+    </div>
+  
+    <div class="container"> <!-- Form Container -->
+      <section id="features">
+          <div class="list"> <!-- Quality Feature -->
+            <div class="icon">
+                <i class="material-icons">assignment_turned_in</i>
+            </div>
+            <div class="discription" id="one">
+                <h2>One</h2>
+                <p>this is short description</p>
+            </div>
+        </div>
+      </section>  
       
-      <!-- User Story #2: I can see an image within the header element with a corresponding 
-           id="header-img". A company logo would make a good image -->
-      <a herf=#home'> <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/299px-Tux.svg.png" />
-      <a href="#one" class="nav-link">ONE</a> |
-      <a href="#two" class="nav-link">TWO</a> |
-      <a href="#tree" class="nav-link">TRREE</a> |              
-    </nav>
-  </div>
-
-  <div>
-    <h1>Product Landing Page</h1> <!-- Page Title -->  
-  </div>
-
-  <!-- User Story #6: I can watch an embedded product video with id="video". -->  
-  <section >
-    <iframe id="video" src="https://www.youtube.com/embed/WnoRj5HNjcg" title="Start do trathlonu - tech. dlefinki - 5150 Warsaw Ironman Triathlon - dystans olimpijski" width="560" height="315" frameborder="0" allowfullscreen ></iframe>
-  </section > 
+      <section id="three">
+        <h2>Three</h2>
+        <p>this is three</p>
+      </section>  
+    </div>
+    
+    <div class="form-container"> <!-- Form Container -->
+      <h1>Product Landing Page</h1> <!-- Page Title -->  
+      
+      <!-- User Story #6: I can watch an embedded product video with id="video". -->  
+        <section >
+          <iframe id="video" src="https://www.youtube.com/embed/WnoRj5HNjcg" title="Start do trathlonu - tech. dlefinki - 5150 Warsaw Ironman Triathlon - dystans olimpijski" width="230" height="155" frameborder="0" allowfullscreen ></iframe>
+        </section > 
+    </div> 
 
     <!-- User Story #7: My landing page has a form element with a corresponding id="form". --> 
     <div class="form-container"> <!-- Form Container -->
         <!-- User Story #12: When I click the #submit element, the email is submitted 
-                to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).-->
+                 to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).-->
         <form id="form" method="post" action="https://www.freecodecamp.com/email-submit">
             <h2> User Story #7: My landing page has a form element with a corresponding id</h2>
             <!-- User Story #8: Within the form, there is an input field 
-                with id="email" where I can enter an email address.-->
+                 with id="email" where I can enter an email address.-->
             <!-- User Story #9: The #email input field should have placeholder text 
                 to let the user know what the field is for. -->     
             <input id="email" type="email" name="email" placeholder="Please enter your email:" required/>
             <!-- User Story #11: Within the form, there is a submit input with a corresponding id="submit". -->  
             <input id="submit" type="submit" value="Submit: your email"/>
-        </form>
         </form>  
-    </div>  
- 
-  
-</div> 
+    </div> 
+      
+          
+    <!-- User Story #14: My product landing page should have at least one media query. -->
+    <section id="media-query"> <!-- Media Query Section -->
+        <div class="duck1">
+          <div class="option">duck #1</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Male_mallard_duck_2.jpg/800px-Male_mallard_duck_2.jpg" alt="Duck1" />
+            <h3>1 shot</h3>  
+            <button class="btn">Select</button>
+        </div>
+        
+      
+        <div class="duck2">
+          <div class="option">duck #2</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Duck-293474_white_background.jpg/728px-Duck-293474_white_background.jpg" alt="Duck1" />
+                <h3>2 shot</h3>  
+            <button class="btn">Select</button>
+        </div>
+      
+       <div class="duck3">
+          <div class="option">duck #3</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Duck-293474_white_background.jpg/728px-Duck-293474_white_background.jpg" alt="Duck1" />
+                <h3>3 shot</h3>  
+            <button class="btn">Select</button>
+        </div>
+        
+    </section>
+    
+    
+    
 </body>
 </html>
