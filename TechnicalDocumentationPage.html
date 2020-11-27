@@ -17,7 +17,7 @@
             position: fixed;
             top: 0px;
             left: 0px;
-            width: 200px;
+            width: 220px;
             height: 100%;
             border: 1px solid white;
             overflow-y: scroll;
@@ -30,11 +30,47 @@
           }
           #main-section{
             display: flex;
-            margin: 10px;
+            margin: 5px;
+          }
+          .nav-link {
+            padding: 1px;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          #navbar li {
+            color: red;
+            border: 2px solid;
+            padding: 1px;
+            list-style: none;
+            position: relative;
+            right: 5px;
           }
           code {
             font-family: monospace;
             color: yellow;
+          }
+          @media only screen and (max-width: 700px) {
+            #navbar ul {
+              height: 200px;
+            }
+            #navbar {
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              padding: 0;
+              margin: 0;
+              width: 90%;
+              max-height: 250px;
+              border: none;
+              z-index: 1;
+              border-bottom: 2px solid white;
+            }
+            #main-doc {
+              position: relative;
+              margin-left: 0px;
+              margin-top: 170px;
+            }
           }
                 
         
@@ -42,44 +78,44 @@
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>     
 </head>
 <body>
-  
+   
     <!-- User Story #1: I can see a main element with a corresponding id="main-doc", 
       which contains the page's main content (technical documentation). -->
     <main id="main-doc">
-
-        <!-- User Story #8: I can see a nav element with a corresponding id="navbar". -->
+        
+        <!--User Story #8: I can see a nav element with a corresponding id="navbar". -->
         <!-- User Story #9: The navbar element should contain one header element which contains 
             text that describes the topic of the technical documentation.-->
         <!-- User Story #10: Additionally, the navbar should contain link (a) elements with the class 
           of nav-link. There should be one for every element with the class main-section.-->
         <!-- User Story #11: The header element in the navbar must come before any link (a) 
-            elements in the navbar.--> 
+            elements in the navbar.-->
         <!-- User Story #12: Each element with the class of nav-link should contain text that corresponds 
           to the header text within each section (e.g. if you have a "Hello world" section/header, 
           your navbar should have an element which contains the text "Hello world").-->
         <!-- User Story #13: When I click on a navbar element, the page should navigate to 
             the corresponding section of the main-doc element (e.g. If I click on a nav-link element 
           that contains the text "Hello world", the page navigates to a section element that has 
-          that id and contains the corresponding header.-->     
+          that id and contains the corresponding header.-->
+        <!-- User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" 
+            should be shown on the left side of the screen and should always be visible to the user.-->
         <nav id="navbar"> <!-- Navigation Bar -->
-
-            <header>my Technical DOC</header>
-            <ul>
-              <a class="nav-link" href="#Doc_One" rel="internal"><li>Doc One</li></a>
-            </ul>
-            <ul>
-              <a class="nav-link" href="#HTML_in_Wikipedia" rel="internal"><li>HTML in Wikipedia</li></a>
-            </ul><ul>
-              <a class="nav-link" href="#Header_3" rel="internal"><li>Header 3</li></a>
-            </ul>
-            <ul>
-              <a class="nav-link" href="#User_Story" rel="internal"><li>User Story</li></a>
-            </ul>
-            <ul>
-              <a class="nav-link" href="#JavaScript_and_Java" rel="internal"><li>JavaScript and Java</li></a>
-            </ul>
-          </nav>    
-
+          <header>my Technical DOC</header>
+          <ul>
+            <a class="nav-link" href="#Doc_One" rel="internal"><li>Doc One</li></a>
+          </ul>
+          <ul>
+            <a class="nav-link" href="#HTML_in_Wikipedia" rel="internal"><li>HTML in Wikipedia</li></a>
+          </ul><ul>
+            <a class="nav-link" href="#Header_3" rel="internal"><li>Header 3</li></a>
+          </ul>
+          <ul>
+            <a class="nav-link" href="#User_Story" rel="internal"><li>User Story</li></a>
+          </ul>
+          <ul>
+            <a class="nav-link" href="#JavaScript_and_Java" rel="internal"><li>JavaScript and Java</li></a>
+          </ul>
+        </nav>    
 
     <!-- User Story #2: Within the #main-doc element, I can see several section elements, 
         each with a class of main-section. There should be a minimum of 5.-->
@@ -149,8 +185,8 @@
         <article>
             <p>Miłego kodowania!</p>
         </article>
-    </section>    
+        </section>    
     </main>    
+    
 </body>
-  
 </html>
