@@ -4,18 +4,52 @@
     <title>Technical Documentation Page</title>
 
     <style>
+        body {
+            background-color: rgb(120,120,120);
+            font-family: 'Francois One', sans-serif;
+            font-style: italic;
+            color: rgb(51,51,51);
+            }
+            #page-container {
+            position: relative;
+        }
+        #main-section{
+            display: flex;
+        }
         
     </style> 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>     
 </head>
 <body>
   
-  <!-- User Story #1: I can see a main element with a corresponding id="main-doc", 
-      which contains the page's main content (technical documentation). -->
-  <main id="main-doc">
+    <!-- User Story #1: I can see a main element with a corresponding id="main-doc", 
+        which contains the page's main content (technical documentation). -->
+    <main id="main-doc">
+    
+      <!-- User Story #2: Within the #main-doc element, I can see several section elements, 
+          each with a class of main-section. There should be a minimum of 5.-->
+      <!-- User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.-->
+      <section class="main-section"> <!-- main-section (1) -->
+        <header> <h2>Header 1</h2> </header> 
+      </section>
+      
+      <section class="main-section"> <!-- main-section (2) -->
+        <header>  <h2>Header 2</h2> </header> 
+      </section>
   
-    
-    
-  </main>  
+      <section class="main-section"> <!-- main-section (3) -->
+        <header>  <h2>Header 3</h2> </header> 
+      </section>
+  
+      <section class="main-section"> <!-- main-section (4) -->
+        <header>  <h2>Header 4</h2> </header> 
+      </section>
+  
+      <section class="main-section"> <!-- main-section (5) -->
+        <header>  <h2>Header 5</h2> </header> 
+      </section>
+  
+    </main>    
 </body>
+  
 </html>
