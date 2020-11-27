@@ -22,34 +22,53 @@
 </head>
 <body>
   
-    <!-- User Story #1: I can see a main element with a corresponding id="main-doc", 
-        which contains the page's main content (technical documentation). -->
-    <main id="main-doc">
+  <!-- User Story #1: I can see a main element with a corresponding id="main-doc", 
+      which contains the page's main content (technical documentation). -->
+      <main id="main-doc">
+  
+        <!-- User Story #2: Within the #main-doc element, I can see several section elements, 
+            each with a class of main-section. There should be a minimum of 5.-->
+        <!-- User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.-->
+        <!-- User Story #4: Each section element with the class of main-section should also have an id 
+             that corresponds with the text of each header contained within it. Any spaces should be 
+             replaced with underscores (e.g. The section that contains the header "JavaScript and Java" 
+             should have a corresponding id="JavaScript_and_Java").-->
+        <section class="main-section" id="Doc_One"> <!-- main-section (1) -->
+          <header>Doc One</header>
+          <article>
+            <p></p>
+          </article>
+        </section>
+        
+        <section class="main-section" id="Introduction"> <!-- main-section (2) -->
+          <header  >Introduction</header> 
+          <article>
+            <p></p>
+          </article>
+        </section>
     
-      <!-- User Story #2: Within the #main-doc element, I can see several section elements, 
-          each with a class of main-section. There should be a minimum of 5.-->
-      <!-- User Story #3: The first element within each .main-section should be a header element which contains text that describes the topic of that section.-->
-      <section class="main-section"> <!-- main-section (1) -->
-        <header> <h2>Header 1</h2> </header> 
-      </section>
-      
-      <section class="main-section"> <!-- main-section (2) -->
-        <header>  <h2>Header 2</h2> </header> 
-      </section>
-  
-      <section class="main-section"> <!-- main-section (3) -->
-        <header>  <h2>Header 3</h2> </header> 
-      </section>
-  
-      <section class="main-section"> <!-- main-section (4) -->
-        <header>  <h2>Header 4</h2> </header> 
-      </section>
-  
-      <section class="main-section"> <!-- main-section (5) -->
-        <header>  <h2>Header 5</h2> </header> 
-      </section>
-  
-    </main>    
+        <section class="main-section" id="Header_3"> <!-- main-section (3) -->
+          <header >Header 3</header> 
+          <article>
+            <p></p>
+          </article>
+        </section>
+    
+        <section class="main-section" id="Header_4"> <!-- main-section (4) -->
+          <header>Header 4</header> 
+          <article>
+            <p></p>
+          </article>
+        </section>
+    
+        <section class="main-section"  id="JavaScript_and_Java"> <!-- main-section (5) -->
+          <header>JavaScript and Java</header> 
+          <article>
+            <p></p>
+          </article>
+        </section>
+    
+      </main>    
 </body>
   
 </html>
