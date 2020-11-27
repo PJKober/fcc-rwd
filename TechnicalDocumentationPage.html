@@ -50,10 +50,25 @@
         <!-- User Story #8: I can see a nav element with a corresponding id="navbar". -->
         <!-- User Story #9: The navbar element should contain one header element which contains 
             text that describes the topic of the technical documentation.-->
-        <nav id="navbar"> <!-- Navigation Bar -->
+        <!-- User Story #10: Additionally, the navbar should contain link (a) elements with the class 
+          of nav-link. There should be one for every element with the class main-section.-->
+          <nav id="navbar"> <!-- Navigation Bar -->
             <header>my Technical DOC</header>
-
-        </nav>    
+            <ul>
+              <a class="nav-link" href="#Doc_One" rel="internal"><li>Doc One</li></a>
+            </ul>
+            <ul>
+              <a class="nav-link" href="#HTML_in_Wikipedia" rel="internal"><li>HTML in Wikipedia</li></a>
+            </ul><ul>
+              <a class="nav-link" href="#Header_3" rel="internal"><li>Header 3</li></a>
+            </ul>
+            <ul>
+              <a class="nav-link" href="#User_Story" rel="internal"><li>UserStory</li></a>
+            </ul>
+            <ul>
+              <a class="nav-link" href="#JavaScript_and_Java" rel="internal"><li>JavaScript and Java</li></a>
+            </ul>
+          </nav>    
 
 
     <!-- User Story #2: Within the #main-doc element, I can see several section elements, 
