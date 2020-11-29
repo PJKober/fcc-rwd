@@ -3,100 +3,163 @@
 <head>
 <title>PJK - Personal Portfolio Webpage</title>
 
-    <style>
-        #welcome-section {
-            text-align: center;
-            background: lightgoldenrodyellow;
-          }
-          #projects {
-            text-align: center;
-            background: lightgreen;
-          }
-          .tiles {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            justify-items: center;
-          }
-          .project-tile {
-            background: white;
-            padding: 2em;
-          }
-          
-          .responsive {
-            max-width: 100%;
-            height: auto;
-          }
-          
-          @media all and (max-width: 800px) {
-            #navbar {
-              justify-content: space-around;
-            }
-          
-            .tiles {
-              grid-template-columns: 1fr 1fr;
-            }
-          }
-                    
-          #navbar {
-            position: fixed;
-            top: 0px;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            background: yellow;
-          }
-          #navbar a {
-            text-decoration: none;
-            display: block;
-            padding: 0.5em;
-            font-size: 1.5em;
-            font-weight: bold;
+<style>
+    body {
+        margin: 0;
+        }
+        
+        #navbar {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background: yellow;
+        }
+        
+        #navbar a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        font-size: 1.5em;
+        font-weight: bold;
             color: pink;
-          }
-          #navbar a:hover {
-            background: #00abe5;
-          }
-          
-          main {
-            display: grid;
-            grid-template-rows: 50vh auto 100px 50px;
-          }
-          #profile {
-            text-align: right;
-            background: grey;
-            display: grid;
+        }
+        
+        #navbar a:hover {
+        background: #b705fd;
+        }
+        
+        main {
+        display: grid;
+        grid-template-rows: 100vh auto 300px 100px;
+        }
+        
+        #welcome-section {
+        text-align: center;
+        background: lightgrey;
+        padding-top: 45vh;
+        }
+        
+        #projects {
+        text-align: center;
+        background: white;
+        }
+        
+        #profile {
+        text-align: right;
+        background: grey;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        }
+        
+        .circle {
+        background: grey;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 100px;
+        }
+        
+        #profile-link {
+        text-decoration: none;
+        color: darkblue;
+        font-size: 2.2em;
+        }
+        
+        #copyright {
+        text-align: center;
+        background: deepskyblue;
+        padding: 1em;
+        }
+        
+        .tiles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        }
+        
+        .project-tile {
+        background: white;
+        padding: 2em;
+        }
+        
+        .project-tile a {
+        text-decoration: none;
+        color: grey;
+        font-weight: bold;
+        font-size: 0.9em;
+        }
+        
+        .responsive {
+        max-width: 100%;
+        height: auto;
+        }
+        
+        @media all and (max-width: 800px) {
+        #navbar {
+            justify-content: space-around;
+        }
+        
+        .tiles {
+            grid-template-columns: 1fr 1fr;
+        }
+        }
+        
+        @media all and (max-width: 600px) {
+        #navbar {
+            flex-flow: column wrap;
+            padding: 0;
+        }
+        
+        #navbar a {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid red;
+            border-bottom: 1px blacl;
+        }
+        
+        #navbar a:last-of-type {
+            border-bottom: none;
+        }
+        
+        .tiles {
             grid-template-columns: 1fr;
-            justify-items: center;
-          }
-          #profile-link {
-            color: darkblue;
-            font-size: 2.2em;
-          }
-                
-    </style>    
+        }
+        }
+                        
+</style>    
 
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </head>    
 <body>
 
 <!-- UserStory #9: My portfolio should have at least one media query.-->    
 <!-- UserStory #6: My portfolio should have a navbar with an id of navbar.--> 
-<section id="menu">
+<header>
     <nav id="navbar">
       <!-- UserStory #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. -->
       <a href="#welcome-section">welcome-section</a>
       <a href="#projects">Projects</a>
     </nav>   
-  </section>
+   <header>
   <!-- UserStory #1: My portfolio should have a welcome section with an id of welcome-section.--> 
   <main>
     
     <section id="welcome-section">
-      <!-- UserStory #2: The welcome section should have an h1 element that contains text.-->    
-      <h1>Hi I am PJK</h1>
-      <p>Responsive Web Design Projects - Build a Personal Portfolio Webpage </p>
+      <div>
+        <!-- UserStory #10: The height of the welcome section should be equal to the height of the viewport.-->
+        <!-- UserStory #2: The welcome section should have an h1 element that contains text.-->    
+        <h1>Hi I am PJK</h1>
+        <p>Responsive Web Design Projects - Build a Personal Portfolio Webpage</p>
+        <p>Currently updating my knowledge on the great FreeCodeCamp website</p>
+      </div>  
     </section>
   
       <!-- UserStory #3: My portfolio should have a projects section with an id of projects.-->
@@ -108,7 +171,7 @@
           <h1>Examples of projects.</h1>
            <a href="https://github.com/PJKober/fcc-rwd" target="_blank">See all in branchs</a>  
         
-          <div class="title" >
+          <div class="tiles" >
               <div class="project-tile">
                   <a href="https://github.com/PJKober/fcc-rwd/blob/SurveyForm/SurveyForm.html" target="_blank">
                     <div>freeCodeCamp : Survey Form</div>
@@ -127,17 +190,16 @@
                   </a>  
               </div>    
           </div>   
-        </section>
+    </section>
       
-      <!-- User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab. -->
-      <section id="profile">
-        <h2>GitHub link</h2>
-        <p>a link with an id of profile-linky</p>
-        <a id="profile-link" href="https://github.com/PJKober" target="_blank">my GitHub</a>
-      </section>  
+    <!-- User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab. -->
+    <section id="profile">
+      <h2>GitHub link</h2>
+      <p>a link with an id of profile-linky</p>
+      <a id="profile-link" href="https://github.com/PJKober" target="_blank">my GitHub</a>
+    </section>  
   
   </main>
-     
    
 </body>
 </html>
