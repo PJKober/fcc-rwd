@@ -1,154 +1,155 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>PJK - Personal Portfolio Webpage</title>
+    <title>PJK - Personal Portfolio Webpage</title>
 
-<style>
-    body {
-        margin: 0;
-        }
-        
-        #navbar {
-        position: fixed;
-        top: 0px;
-        width: 100%;
-        
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        background: yellow;
-        }
-        
-        #navbar a {
-        text-decoration: none;
-        display: block;
-        padding: 1em;
-        font-size: 1.5em;
-        font-weight: bold;
-            color: pink;
-        }
-        
-        #navbar a:hover {
-        background: #b705fd;
-        }
-        
-        main {
-        display: grid;
-        grid-template-rows: 100vh auto 300px 100px;
-        }
-        
-        #welcome-section {
-        text-align: center;
-        background: lightgrey;
-        padding-top: 45vh;
-        }
-        
-        #projects {
-        text-align: center;
-        background: white;
-        }
-        
-        #profile {
-        text-align: right;
-        background: grey;
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-items: center;
-        }
-        
-        .circle {
-        background: grey;
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        text-align: center;
-        vertical-align: middle;
-        line-height: 100px;
-        }
-        
-        #profile-link {
-        text-decoration: none;
-        color: darkblue;
-        font-size: 2.2em;
-        }
-        
-        #copyright {
-        text-align: center;
-        background: deepskyblue;
-        padding: 1em;
-        }
-        
-        .tiles {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-items: center;
-        }
-        
-        .project-tile {
-        background: white;
-        padding: 2em;
-        }
-        
-        .project-tile a {
-        text-decoration: none;
-        color: grey;
-        font-weight: bold;
-        font-size: 0.9em;
-        }
-        
-        .responsive {
-        max-width: 100%;
-        height: auto;
-        }
-        
-        @media all and (max-width: 800px) {
-        #navbar {
-            justify-content: space-around;
-        }
-        
-        .tiles {
-            grid-template-columns: 1fr 1fr;
-        }
-        }
-        
-        @media all and (max-width: 600px) {
-        #navbar {
-            flex-flow: column wrap;
-            padding: 0;
-        }
-        
-        #navbar a {
+    <style>
+        body {
+            margin: 0;
+            }
+            
+            #navbar {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            background: yellow;
+            }
+            
+            #navbar a {
+            text-decoration: none;
+            display: block;
+            padding: 1em;
+            font-size: 1.5em;
+            font-weight: bold;
+                color: pink;
+            }
+            
+            #navbar a:hover {
+            background: #b705fd;
+            }
+            
+            main {
+            display: grid;
+            grid-template-rows: 100vh auto 300px 100px;
+            }
+            
+            #welcome-section {
             text-align: center;
-            padding: 10px;
-            border-top: 1px solid red;
-            border-bottom: 1px blacl;
-        }
-        
-        #navbar a:last-of-type {
-            border-bottom: none;
-        }
-        
-        .tiles {
+            background: lightgrey;
+            padding-top: 45vh;
+            }
+            
+            #projects {
+            text-align: center;
+            background: white;
+            }
+            
+            #profile {
+            text-align: right;
+            background: grey;
+            display: grid;
             grid-template-columns: 1fr;
-        }
-        }
-                        
-</style>    
+            justify-items: center;
+            }
+            
+            .circle {
+            background: grey;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100px;
+            }
+            
+            #profile-link {
+            text-decoration: none;
+            color: darkblue;
+            font-size: 2.2em;
+            }
+            
+            #copyright {
+            text-align: center;
+            background: deepskyblue;
+            padding: 1em;
+            }
+            
+            .tiles {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
+            }
+            
+            .project-tile {
+            background: white;
+            padding: 2em;
+            }
+            
+            .project-tile a {
+            text-decoration: none;
+            color: grey;
+            font-weight: bold;
+            font-size: 0.9em;
+            }
+            
+            .responsive {
+            max-width: 100%;
+            height: auto;
+            }
+            
+            @media all and (max-width: 800px) {
+            #navbar {
+                justify-content: space-around;
+            }
+            
+            .tiles {
+                grid-template-columns: 1fr 1fr;
+            }
+            }
+            
+            @media all and (max-width: 600px) {
+            #navbar {
+                flex-flow: column wrap;
+                padding: 0;
+            }
+            
+            #navbar a {
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid red;
+                border-bottom: 1px blacl;
+            }
+            
+            #navbar a:last-of-type {
+                border-bottom: none;
+            }
+            
+            .tiles {
+                grid-template-columns: 1fr;
+            }
+            }
+                            
+    </style>    
 
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </head>    
 <body>
+    <!-- UserStory #11: The navbar should always be at the top of the viewport.-->
+    <!-- UserStory #9: My portfolio should have at least one media query.-->    
+    <!-- UserStory #6: My portfolio should have a navbar with an id of navbar.--> 
+    <header>
+        <nav id="navbar">
+        <!-- UserStory #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. -->
+        <a href="#welcome-section">welcome-section</a>
+        <a href="#projects">Projects</a>
+        </nav>   
+    </header>
 
-<!-- UserStory #9: My portfolio should have at least one media query.-->    
-<!-- UserStory #6: My portfolio should have a navbar with an id of navbar.--> 
-<header>
-    <nav id="navbar">
-      <!-- UserStory #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. -->
-      <a href="#welcome-section">welcome-section</a>
-      <a href="#projects">Projects</a>
-    </nav>   
-   <header>
   <!-- UserStory #1: My portfolio should have a welcome section with an id of welcome-section.--> 
   <main>
     
