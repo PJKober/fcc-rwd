@@ -7,21 +7,37 @@
         #welcome-section {
             text-align: center;
             background: lightgoldenrodyellow;
-        }
-        #projects {
+          }
+          #projects {
             text-align: center;
             background: lightgreen;
-        }
-        .tiles {
+          }
+          .tiles {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             justify-items: center;
-        }
-        .project-tile {
+          }
+          .project-tile {
             background: white;
             padding: 2em;
-        }
-        #navbar {
+          }
+          
+          .responsive {
+            max-width: 100%;
+            height: auto;
+          }
+          
+          @media all and (max-width: 800px) {
+            #navbar {
+              justify-content: space-around;
+            }
+          
+            .tiles {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+                    
+          #navbar {
             position: fixed;
             top: 0px;
             width: 100%;
@@ -29,19 +45,20 @@
             flex-direction: row;
             justify-content: flex-end;
             background: yellow;
-        }
-        #navbar a {
+          }
+          #navbar a {
             text-decoration: none;
             display: block;
             padding: 0.5em;
             font-size: 1.5em;
             font-weight: bold;
             color: pink;
-        }
-        #navbar a:hover {
+          }
+          #navbar a:hover {
             background: #00abe5;
-        }
-        main {
+          }
+          
+          main {
             display: grid;
             grid-template-rows: 50vh auto 100px 50px;
           }
@@ -64,13 +81,13 @@
 </head>    
 <body>
 
+<!-- UserStory #9: My portfolio should have at least one media query.-->    
 <!-- UserStory #6: My portfolio should have a navbar with an id of navbar.--> 
 <section id="menu">
     <nav id="navbar">
       <!-- UserStory #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. -->
       <a href="#welcome-section">welcome-section</a>
       <a href="#projects">Projects</a>
-      <a href="#profile">myGitHub</a>
     </nav>   
   </section>
   <!-- UserStory #1: My portfolio should have a welcome section with an id of welcome-section.--> 
