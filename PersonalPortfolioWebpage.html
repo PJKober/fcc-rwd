@@ -8,8 +8,23 @@
             text-align: center;
             background: lightgoldenrodyellow;
         }
+        #projects {
+          text-align: center;
+          background: lightgreen;
+        }
+        .tiles {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          justify-items: center;
+        }
+        .project-tile {
+          background: white;
+          padding: 2em;
+        }        
+
     </style>    
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>    
 <body>
 
 <!-- UserStory #1: My portfolio should have a welcome section with an id of welcome-section.--> 
@@ -20,8 +35,32 @@
     </section>
 
     <!-- UserStory #3: My portfolio should have a projects section with an id of projects.-->
-    <section id="projects">
-
+    <section id="projects"> 
+        <!-- User Story #4: The projects section should contain at least one element 
+            with a class of project-tile to hold a project.-->
+        
+        <h1>Examples of projects.</h1>
+         <a href="https://github.com/PJKober/fcc-rwd" target="_blank">See all in branchs</a>  
+      
+        <div class="title" >
+            <div class="project-tile">
+                <a href="https://github.com/PJKober/fcc-rwd/blob/SurveyForm/SurveyForm.html" target="_blank">
+                  <div>freeCodeCamp : Survey Form</div>
+                </a>  
+            </div>    
+       
+            <div class="project-tile">
+                <a href="https://github.com/PJKober/fcc-rwd/blob/TechnicalDocumentationPage/TechnicalDocumentationPage.html" target="_blank">
+                 <div>freeCodeCamp : Technical Documentation Page</div>
+                </a>  
+            </div>    
+                   
+            <div class="project-tile">
+                <a href="https://github.com/PJKober/fcc-rwd/blob/ProductLandingPage/ProductLandingPage.html" target="_blank">
+                  <div>freeCodeCamp : Build a Product Landing Page</div>
+                </a>  
+            </div>    
+        </div>   
     </section>
 
 </main>
