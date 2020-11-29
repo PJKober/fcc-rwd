@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PJK - Personal Portfolio Webpage</title>
+<title>PJK - Personal Portfolio Webpage</title>
 
     <style>
         #welcome-section {
@@ -9,67 +9,98 @@
             background: lightgoldenrodyellow;
         }
         #projects {
-          text-align: center;
-          background: lightgreen;
+            text-align: center;
+            background: lightgreen;
         }
         .tiles {
-          display: grid;
-          grid-template-columns: 1fr 1fr 1fr 1fr;
-          justify-items: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-items: center;
         }
         .project-tile {
-          background: white;
-          padding: 2em;
-        }        
-
+            background: white;
+            padding: 2em;
+        }
+        #navbar {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            background: yellow;
+        }
+        #navbar a {
+            text-decoration: none;
+            display: block;
+            padding: 0.5em;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: pink;
+        }
+        #navbar a:hover {
+            background: #00abe5;
+        }
+        main {
+            display: grid;
+            grid-template-rows: 50vh auto 100px 50px;
+        }
+                
     </style>    
+
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </head>    
 <body>
 
 <!-- UserStory #6: My portfolio should have a navbar with an id of navbar.--> 
-<nav id="navbar">
-
-</nav>   
-
-<!-- UserStory #1: My portfolio should have a welcome section with an id of welcome-section.--> 
-<main>
+<section id="menu">
+    <nav id="navbar">
+      <!-- UserStory #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. -->
+      <a href="#welcome-section">welcome-section</a>
+      <a href="#projects">Projects</a>
+    </nav>   
+  </section>
+  <!-- UserStory #1: My portfolio should have a welcome section with an id of welcome-section.--> 
+  <main>
+    
     <section id="welcome-section">
-        <!-- UserStory #2: The welcome section should have an h1 element that contains text.-->    
-        <h1>Hi I am PJK</h1>
+      <!-- UserStory #2: The welcome section should have an h1 element that contains text.-->    
+      <h1>Hi I am PJK</h1>
+      <p>Responsive Web Design Projects - Build a Personal Portfolio Webpage </p>
     </section>
-
-    <!-- UserStory #3: My portfolio should have a projects section with an id of projects.-->
-    <section id="projects"> 
+  
+      <!-- UserStory #3: My portfolio should have a projects section with an id of projects.-->
+    <section id="projects">
+          
+          <!-- UserStory #4: The projects section should contain at least one element 
+              with a class of project-tile to hold a project.-->
+          <!-- UserStory #5: The projects section should contain at least one link to a project.-->
+          <h1>Examples of projects.</h1>
+           <a href="https://github.com/PJKober/fcc-rwd" target="_blank">See all in branchs</a>  
         
-        <!-- UserStory #4: The projects section should contain at least one element 
-            with a class of project-tile to hold a project.-->
-        <!-- UserStory #5: The projects section should contain at least one link to a project.-->
-        <h1>Examples of projects.</h1>
-         <a href="https://github.com/PJKober/fcc-rwd" target="_blank">See all in branchs</a>  
-      
-        <div class="title" >
-            <div class="project-tile">
-                <a href="https://github.com/PJKober/fcc-rwd/blob/SurveyForm/SurveyForm.html" target="_blank">
-                  <div>freeCodeCamp : Survey Form</div>
-                </a>  
-            </div>    
-       
-            <div class="project-tile">
-                <a href="https://github.com/PJKober/fcc-rwd/blob/TechnicalDocumentationPage/TechnicalDocumentationPage.html" target="_blank">
-                 <div>freeCodeCamp : Technical Documentation Page</div>
-                </a>  
-            </div>    
-                   
-            <div class="project-tile">
-                <a href="https://github.com/PJKober/fcc-rwd/blob/ProductLandingPage/ProductLandingPage.html" target="_blank">
-                  <div>freeCodeCamp : Build a Product Landing Page</div>
-                </a>  
-            </div>    
-        </div>   
-    </section>
-
-</main>
+          <div class="title" >
+              <div class="project-tile">
+                  <a href="https://github.com/PJKober/fcc-rwd/blob/SurveyForm/SurveyForm.html" target="_blank">
+                    <div>freeCodeCamp : Survey Form</div>
+                  </a>  
+              </div>    
+         
+              <div class="project-tile">
+                  <a href="https://github.com/PJKober/fcc-rwd/blob/TechnicalDocumentationPage/TechnicalDocumentationPage.html" target="_blank">
+                   <div>freeCodeCamp : Technical Documentation Page</div>
+                  </a>  
+              </div>    
+                     
+              <div class="project-tile">
+                  <a href="https://github.com/PJKober/fcc-rwd/blob/ProductLandingPage/ProductLandingPage.html" target="_blank">
+                    <div>freeCodeCamp : Build a Product Landing Page</div>
+                  </a>  
+              </div>    
+          </div>   
+      </section>
+  
+  </main>
    
 </body>
 </html>
