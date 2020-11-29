@@ -44,7 +44,18 @@
         main {
             display: grid;
             grid-template-rows: 50vh auto 100px 50px;
-        }
+          }
+          #profile {
+            text-align: right;
+            background: grey;
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-items: center;
+          }
+          #profile-link {
+            color: darkblue;
+            font-size: 2.2em;
+          }
                 
     </style>    
 
@@ -59,6 +70,7 @@
       <!-- UserStory #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page. -->
       <a href="#welcome-section">welcome-section</a>
       <a href="#projects">Projects</a>
+      <a href="#profile">myGitHub</a>
     </nav>   
   </section>
   <!-- UserStory #1: My portfolio should have a welcome section with an id of welcome-section.--> 
@@ -98,9 +110,17 @@
                   </a>  
               </div>    
           </div>   
-      </section>
+        </section>
+      
+      <!-- User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab. -->
+      <section id="profile">
+        <h2>GitHub link</h2>
+        <p>a link with an id of profile-linky</p>
+        <a id="profile-link" href="https://github.com/PJKober" target="_blank">my GitHub</a>
+      </section>  
   
   </main>
+     
    
 </body>
 </html>
